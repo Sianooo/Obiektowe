@@ -1,0 +1,43 @@
+import java.util.Scanner;
+
+public class HumanStory {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.print("Podaj imię człowieka: ");
+        String name = scanner.nextLine();
+
+        System.out.print("Czy człowiek jest dorosły? (true/false): ");
+        boolean isAdult = scanner.nextBoolean();
+
+        System.out.print("Podaj wiek człowieka: ");
+        int age = scanner.nextInt();
+
+        System.out.print("Podaj wagę człowieka: ");
+        double weight = scanner.nextDouble();
+
+        System.out.print("Podaj zawód człowieka: ");
+        scanner.nextLine(); // Odczyt nowej linii po nextDouble()
+        String occupation = scanner.nextLine();
+
+        System.out.print("Podaj pierwszą literę ulubionego koloru człowieka: ");
+        char favoriteColorInitial = scanner.next().charAt(0);
+
+        System.out.println("Wprowadzone dane dla człowieka:");
+        System.out.println("Imię: " + name);
+        System.out.println("Czy dorosły? " + isAdult);
+        System.out.println("Wiek: " + age + " lat");
+        System.out.println("Waga: " + weight + " kg");
+        System.out.println("Zawód: " + occupation);
+        System.out.println("Pierwsza litera ulubionego koloru: " + favoriteColorInitial);
+
+        // Tworzenie historii na podstawie wprowadzonych danych
+        String story = name + " jest " + (isAdult ? "dorosłą osobą" : "młodym człowiekiem") + ". ";
+        story += "W wieku " + age + " lat, " + name + " waży " + weight + " kg. ";
+        story += "Pracuje jako " + occupation + " i jego ulubiony kolor zaczyna się na literę '" + favoriteColorInitial + "'.";
+        
+        System.out.println("Historia człowieka: " + story);
+
+        scanner.close();
+    }
+}
