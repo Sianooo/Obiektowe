@@ -1,8 +1,8 @@
 public class Laptop extends Komputer{
-    public Laptop(int pojemoscBateriiWOah) {
-        this.pojemoscBateriiWOah = pojemoscBateriiWOah;
+    int howmuchmemory;
+
+    public Laptop(int koszt, String producent, boolean czynowy, int howmuchmemory) {
+        super(koszt, producent, czynowy);
+        this.howmuchmemory = howmuchmemory;
     }
-
-    int pojemoscBateriiWOah;
-
 }

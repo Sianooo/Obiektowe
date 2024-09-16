@@ -1,24 +1,22 @@
 public class Komputer {
-    /*Zad 1*/
-    String nazwaProducenta;
-    int iloscRdzeniProcesora;
-    boolean czyJestStworzonyDoGier;
+    int koszt;
+    String producent;
+    boolean czynowy;
 
-    public Komputer(){}
 
-    public Komputer(String nazwaProducenta, int iloscRdzeniProcesora, boolean czyJestStworzonyDoGier) {
-        this.nazwaProducenta = nazwaProducenta;
-        this.iloscRdzeniProcesora = iloscRdzeniProcesora;
-        this.czyJestStworzonyDoGier = czyJestStworzonyDoGier;
+
+    void On()
+    {
+        System.out.println("Komputer jest wlaczony");
+    }
+    void Off()
+    {
+        System.out.println("Komputer jest wyłaczony");
     }
 
-    public void dodajRdzenie (int iloscRdzeniProcesora)
-    {
-        this.iloscRdzeniProcesora =iloscRdzeniProcesora;
-    }
-
-    public void ustawNazwe(String nazwaProducenta)
-    {
-        this.nazwaProducenta=nazwaProducenta;
+    public Komputer(int koszt, String producent, boolean czynowy) {
+        this.koszt = koszt;
+        this.producent = producent;
+        this.czynowy = czynowy;
     }
 }
